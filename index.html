@@ -15,9 +15,9 @@
         <i class="fa-solid fa-circle-xmark"></i>
       </button>
     </div>
-    <section id="produtos-carrinho"></section>
-    <p id="preco-total">$200</p>
-    <button class="bg-slate-200 text-slate-900 p-1">Finalizar Compra</button>
+    <section id="produtos-carrinho" class="h-3/5 overflow-y-auto flex flex-col gap-2"></section>
+    <p id="preco-total" class="bg-slate-200 text-green-800 rounded-sm pl-5"></p>
+    <button class="bg-slate-200 text-slate-900 p-1 hover:bg-slate-900 hover:text-slate-200">Finalizar Compra</button>
   </section>
   <header class="flex justify-between bg-slate-950 shadow-slate-400 shadow-xl px-8 py-4 sticky top-0 z-10 text-xl">
     <img class="h-16" src="./assets/logo/hashtag.svg" alt="Logo do Magazine Hashtag">
@@ -26,7 +26,23 @@
       <button><i class="fa-solid fa-user"></i></button>
     </div>
   </header>
-  <main>
+  <main class="flex flex-col items-center">
+    <section id="filtros" class="p-10 flex">
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-todos" class="peer hidden" checked>
+        <label for="exibir-todos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Todos</label>
+      </div>
+
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-masculinos" class="peer hidden">
+        <label for="exibir-masculinos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Masculinos</label>
+      </div>
+
+      <div class="px-2">
+        <input type="radio" name="filtro" id="exibir-femininos" class="peer hidden">
+        <label for="exibir-femininos" class="peer-checked:bg-slate-950 peer-checked:text-slate-200 peer-checked:font-bold p-2 rounded-xl select-none cursor-pointer">Femininos</label>
+      </div>  
+    </section>
     <section id="container-produto" class="flex flex-wrap p-10 justify-center gap-10">
       
     </section>
