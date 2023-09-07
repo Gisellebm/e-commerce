@@ -83,7 +83,7 @@ export function desenharProdutoNoCarrinhoSimples(idProduto, idContainerHtml, qua
   const containerProdutosCarrinho = document.getElementById(idContainerHtml)
 
   const elementoArticle = document.createElement("article")
-  const articleClasses = ["flex", "gap-4", "p-1", "relative", "bg-stone-200", "rounded-lg", "mb-2", "w-96"]
+  const articleClasses = ["flex", "gap-4", "p-1", "relative", "bg-stone-200", "rounded-lg", "mb-2", "w-[360px]"]
 
   for (const articleClass of articleClasses) {
       elementoArticle.classList.add(articleClass)
