@@ -73,13 +73,17 @@ export function lerLocalStorage(chave) {
   return JSON.parse(localStorage.getItem(chave))
 }
 
+export function apagarDoLocalStorage(chave) {
+  localStorage.removeItem(chave)
+}
+
 export function desenharProdutoNoCarrinhoSimples(idProduto, idContainerHtml, quantidadeProduto) {
   const produto = catalogo.find(p => p.id === idProduto)
 
   const containerProdutosCarrinho = document.getElementById(idContainerHtml)
 
   const elementoArticle = document.createElement("article")
-  const articleClasses = ["flex", "gap-4", "p-1", "relative", "bg-stone-200", "rounded-lg", "mb-2"]
+  const articleClasses = ["flex", "gap-4", "p-1", "relative", "bg-stone-200", "rounded-lg", "mb-2", "w-96"]
 
   for (const articleClass of articleClasses) {
       elementoArticle.classList.add(articleClass)
